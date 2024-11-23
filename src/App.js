@@ -1,14 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 import SignUpComponent from './components/signup/signup';
 import SignInComponent from './components/signin/signin';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DashboardComponent from './components/dashboard/dashboard';
+
 
 function App() {
   return (
-    <div className="App">
-      {/* <SignUpComponent></SignUpComponent> */}
-      <SignInComponent></SignInComponent>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<DashboardComponent />} />
+        <Route path="/signin" element={<SignInComponent />} />
+        <Route path="/signup" element={<SignUpComponent />} />
+      </Routes>
+    </Router>
   );
 }
 

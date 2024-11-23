@@ -12,6 +12,19 @@
 
 #imgSection {
     width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+#imgSection>div {
+    width: 500px;
+    height: 500px;
+}
+
+#imgSection>div>img {
+    width: 100%;
 }
 
 
@@ -67,9 +80,10 @@ input:focus {
     border-bottom: 1px solid black;
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 900px) {
     #imgSection {
-        border: 2px solid red;
         display: none;
     }
 
