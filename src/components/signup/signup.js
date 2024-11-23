@@ -35,7 +35,10 @@ function SignUpComponent() {
                 setLoading(true)
                 setPasswordError(false)
 
-                const response = await axios.post("http://localhost:5000/otpverification", {
+                // const response = await axios.post("http://localhost:5000/otpverification", {
+                //     formData
+                // });
+                const response = await axios.post("https://highway-delite-backend-e9eo.onrender.com/otpverification", {
                     formData
                 });
                 if (response.data.emailFound) {
@@ -61,7 +64,10 @@ function SignUpComponent() {
     async function verifyOtp() {
         try {
             if (verificationOtp == otp) {
-                const response = await axios.post("http://localhost:5000/signup", {
+                // const response = await axios.post("http://localhost:5000/signup", {
+                //     formData
+                // });
+                const response = await axios.post("https://highway-delite-backend-e9eo.onrender.com/signup", {
                     formData
                 });
                 localStorage.setItem('token', response.data.token);
